@@ -1,0 +1,392 @@
+/* ================================================== */
+/* BASIC SETUP */
+/* ================================================== */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  background-color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+/* ================================================== */
+/* HEADER */
+/* ================================================== */
+.header__cover {
+  position: relative;
+  background-image: url("./assets/beach.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  height: 150px;
+}
+
+.header__profile-img img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  bottom: -50px;
+}
+
+.header__profile {
+  margin-top: 60px;
+  padding: 0 10px;
+  margin-bottom: 12px;
+}
+
+.header__profile p {
+  font-size: 15px;
+}
+
+.header__profile-name {
+  margin-bottom: 10px;
+}
+
+.header__profile-name p {
+  color: #8f8f8f;
+  margin-top: -5px;
+  font-size: 15px;
+}
+
+.header__links {
+  display: flex;
+  gap: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 0 10px 10px 10px;
+}
+
+.header__links-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #808080;
+}
+
+.header__links-item p,
+.header__links-item a {
+  font-size: 14px;
+}
+
+.header__links-item a {
+  color: #1d9bf0;
+}
+
+.header__links-item a:hover {
+  text-decoration: underline;
+}
+
+.header__links img {
+  height: 20px;
+  width: 20px;
+}
+
+/* ================================================== */
+/* EXPERIENCE */
+/* ================================================== */
+.experience {
+  padding: 0 10px;
+  margin-top: 25px;
+}
+
+.experience > h4 {
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+
+.experience__box {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+  margin: 12px 0;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+.experience__box:hover {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+}
+
+.experience__box-date {
+  color: #808080;
+}
+
+.experience__box-date {
+  width: 30%;
+}
+
+.experience__box-role {
+  width: 70%;
+}
+
+.experience__box-role p {
+  color: #8f8f8f;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.experience__box-role h4 {
+  font-size: 14px;
+}
+
+.experience__box-date p {
+  font-size: 14px;
+}
+
+/* ================================================== */
+/* PROJECTS */
+/* ================================================== */
+#projects {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.projects {
+  padding: 0 10px;
+}
+
+.projects > h4 {
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+
+.slider {
+  width: 500px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+.slides::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  padding-top: 10px;
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 500px;
+  height: 300px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.slides > div:target {
+  /* transform: scale(0.8); */
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+.slider > a:active {
+  top: 1px;
+}
+.slider > a:focus {
+  background: #000;
+}
+
+.slider > a:hover {
+  background-color: #8f8f8f;
+}
+
+.slide__img {
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 10px;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  height: 150px;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.slide:hover .overlay {
+  opacity: 1;
+}
+
+.slide__link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+  transition: 0.5s ease;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #000;
+  color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.slide:hover .slide__link {
+  opacity: 1;
+}
+
+.slide p {
+  font-size: 16px;
+  text-align: left;
+}
+
+/* ================================================== */
+/* SKILLS */
+/* ================================================== */
+#skills {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.skills {
+  padding: 0 10px;
+}
+
+.skills > h4 {
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.skills ul {
+  font-size: 14px;
+}
+
+.skills li {
+  list-style-type: circle;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 11px;
+  text-align: center;
+}
+
+/* ================================================== */
+/* Responsive */
+/* ================================================== */
+@media(max-width: 500px) {
+  .header__cover {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .header__links {
+    flex-wrap: wrap;
+  }
+
+  .slides > div {
+    width: 100%;
+    height: 250px;
+  }
+
+  .slide__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .overlay {
+    opacity: 1;
+    height: 120px;
+    width: 100%;
+  }
+
+  .slide__link {
+    opacity: 1;
+  }
+
+  .experience__box {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .experience__box-date {
+    width: 100%;
+  }
+  
+  .experience__box-role {
+    width: 100%;
+  }
+}
