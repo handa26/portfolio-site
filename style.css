@@ -363,6 +363,10 @@ footer p {
     height: 100%;
   }
 
+  .slide h3 {
+    font-size: 18px;
+  }
+
   .slider {
     width: 100%;
   }
@@ -371,6 +375,7 @@ footer p {
     opacity: 1;
     height: 120px;
     width: 100%;
+    padding: 10px;
   }
 
   .slide__link {
