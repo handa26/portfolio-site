@@ -120,6 +120,8 @@ img {
 .experience > h4 {
   text-decoration: underline;
   margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .experience__box {
@@ -129,6 +131,7 @@ img {
   margin: 12px 0;
   font-size: 16px;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 .experience__box:hover {
@@ -177,6 +180,37 @@ img {
 .projects > h4 {
   text-decoration: underline;
   margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.projects__list-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #777777;
+}
+
+.projects__list-item h3 {
+  font-size: 17px;
+}
+
+.projects__list-item .projects__list-item-link {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.projects__list-item-link a {
+  color: #fff;
+}
+
+.projects__list-item-link a:hover {
+  text-decoration: underline;
+}
+
+.projects__list-item p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #d1d1d1;
 }
 
 .slider {
@@ -316,8 +350,16 @@ img {
 }
 
 .skills > h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 900;
   text-decoration: underline;
-  margin-bottom: 15px;
+}
+
+.skills p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #d1d1d1;
 }
 
 .skills ul {
